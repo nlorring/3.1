@@ -12,16 +12,16 @@ namespace Program
         {
             if (user == true)
             {
-                array = sozdanie1(n);
+                array = sozdanieuser(n);
             }
             else
             {
-                array = sozdanie2(n);
+                array = sozdaniernd(n);
             }
         }
 
 
-        static int[] sozdanie1(int n)
+        static int[] sozdanieuser(int n)
         {
             int[] l = new int[n];
             for (int i = 0; i < n; i++)
@@ -32,7 +32,7 @@ namespace Program
             }
             return l;
         }
-        static int[] sozdanie2(int n)
+        static int[] sozdaniernd(int n)
         {
             Random rnd = new Random();
             int[] mas = new int[n];
