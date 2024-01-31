@@ -1,4 +1,4 @@
-dvuxmerniy 
+
 using System;
 
 namespace Program
@@ -12,16 +12,16 @@ namespace Program
         {
             if (user == true)
             {
-                array = sozdanie1(n, c);
+                array = sozdanieuser(n, c);
             }
             else
             {
-                array = sozdanie2(n, c);
+                array = sozdaniernd(n, c);
             }
         }
 
 
-        static int[,] sozdanie1(int n, int c)
+        static int[,] sozdanieuser(int n, int c)
         {
             int[,] l = new int[n, c];
             for (int i = 0; i < n; i++)
@@ -34,7 +34,7 @@ namespace Program
             }
             return l;
         }
-        static int[,] sozdanie2(int n, int c)
+        static int[,] sozdaniernd(int n, int c)
         {
             Random rnd = new Random();
             int[,] mas = new int[n, c];
@@ -77,7 +77,7 @@ namespace Program
             int n = int.Parse(Console.ReadLine());
             Console.WriteLine("Введите количество строк в двухмерном массиве");
             int c = int.Parse(Console.ReadLine());
-            dvuhmassive array = new (user, n, c);
+            dvuhmassive array = new dvuhmassive(user, n, c);
             decimal s = array.nomerodin(n, c);
             Console.WriteLine($"Среднее кол-во элементов в массиве: {s}");
             
