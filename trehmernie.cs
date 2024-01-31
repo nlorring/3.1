@@ -1,26 +1,26 @@
 using System;
 
 
-    class dvuhmassive
+    class trehmassive
     {
         public int[][] array;
         public int n;
 
-        public dvuhmassive(bool user, int N)
+        public trehmassive(bool user, int N)
         {
             n = N;
             if (user == true)
             {
-                sozdanie1();
+                sozdanieuser();
             }
             else
             {
-                sozdanie2();
+                sozdaniernd();
             }
         }
 
 
-        public void sozdanie1()
+        public void sozdanieuser()
         {
             array = new int[n][];
             for (int i = 0; i < n; i++)
@@ -36,7 +36,7 @@ using System;
                 array[i]= tmp;
             }
         }
-        public void sozdanie2()
+        public void sozdaniernd()
         {
             Random rnd = new Random();
             array = new int[n][];
@@ -101,7 +101,7 @@ using System;
             bool user = bool.Parse(Console.ReadLine());
             Console.WriteLine("Введите количество строк в ступенчатом массиве");
             int n = int.Parse(Console.ReadLine());
-            dvuhmassive array = new dvuhmassive(user, n);
+            trehmassive array = new trehmassive(user, n);
             
             Console.WriteLine($"Среднее в массиве: {array.nomerodin()}");
             
