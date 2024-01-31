@@ -25,10 +25,12 @@ using System;
             array = new int[n][];
             for (int i = 0; i < n; i++)
             {
+                Console.WriteLine($"Напишите количество элементов в {i+1} строке");
                 int c = int.Parse(Console.ReadLine());
                 int[] tmp = new int[c];
                 for(int j = 0; j<c; j++)
                 {
+                    Console.WriteLine($"Введите элемент {j+1} в {i+1} строке");
                     tmp[j] = int.Parse(Console.ReadLine());
                 }
                 array[i]= tmp;
@@ -40,6 +42,7 @@ using System;
             array = new int[n][];
             for (int i = 0; i < n; i++)
             {
+                Console.WriteLine($"Напишите количество элементов в {i+1} строке");
                 int c = int.Parse(Console.ReadLine());
                 int[] tmp = new int[c];
                 for(int j = 0; j < c; j++)
